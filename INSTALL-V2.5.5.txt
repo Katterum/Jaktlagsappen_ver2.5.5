@@ -1,0 +1,15 @@
+KATTERUMS JAKTLAG v2.5.5 - KOMPLETT PAKET
+
+Bygger vidare på v2.5.4.
+
+Rättning i v2.5.5:
+- Fällt vilt skickar created_by med den inloggade Supabase-användarens auth.uid().
+- Detta matchar befintlig RLS-policy animals_insert: created_by = auth.uid().
+- RLS ska fortsatt vara aktiverat.
+- Befintlig lokal lagring och övrig v2.5.4-funktionalitet är bevarad.
+
+Installation:
+1. Ersätt alla filer i GitHub-repot med filerna i ZIP-paketet.
+2. Ändra inte animals_insert-policyn och stäng inte av RLS.
+3. Kontrollera att appen visar v2.5.5.
+4. Registrera ett testdjur och kontrollera att en rad skapas i Supabase-tabellen animals.
